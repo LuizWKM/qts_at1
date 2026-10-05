@@ -1,17 +1,46 @@
 [project]
 name = "cadastro-itens"
 version = "0.1.0"
-description = "Add your description here"
+description = "Sistema simples de cadastro de itens"
 readme = "README.md"
 authors = [
     { name = "LuizWKM", email = "luizricardowm@outlook.com" }
 ]
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+    "fastapi[standard]>=0.115.0",
+    "pydantic>=2.10.0",
+]
 
-[project.scripts]
-cadastro-itens = "cadastro_itens:main"
+[dependency-groups]
+dev = [
+    "pytest>=8.3.0",
+    "pytest-cov>=6.0.0",
+    "httpx>=0.28.0",
+]
 
 [build-system]
 requires = ["uv_build>=0.12.23,<0.13.0"]
 build-backend = "uv_build"
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+addopts = "--cov=app --cov-branch --cov-report=term-missing --cov-report=html"
+pythonpath = ["."]
+markers = [
+    "unit: testes unitarios isolados",
+    "integration: testes de integracao de API",
+    "blackbox: testes de caixa preta (EP e BVA)",
+    "whitebox: testes de caixa branca (cobertura estrutural)",
+]
+filterwarnings = [
+    "ignore::starlette.exceptions.StarletteDeprecationWarning",
+    "ignore::DeprecationWarning",
+]
+
+[tool.coverage.run]
+omit = [
+    "*/__init__.py",
+]

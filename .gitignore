@@ -36,3 +36,5 @@ Thumbs.db
 .env
 .env.*
 !.env.example
+
+Agora lendo o AGENTS.MD, faça testes unitário com Pytest estruturados no Padrão Arrange, Act, Assert. Aplique particionamento de equivalência EP e Analise de vfalor limite (BVA). Testes de Error Guessing para cenários de entradas inválidas ou inesperadas. Utilize @pytest.mark.parametrize e marcações @pytest.mark.unit, além de utilizar os markers do pyproject.toml quando necessário. Suíte com quantidade considerável de cenários/asserções de teste em torno de 15 a 20 testes e Medição com **pytest-cov** (`--cov-branch`) atingindo **100% de cobertura de código e ramificações** nas regras de negócio.

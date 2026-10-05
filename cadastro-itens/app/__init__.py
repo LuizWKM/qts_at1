@@ -1,8 +1,9 @@
 """API pública do sistema de cadastro de itens."""
 
 from .domain import CadastroItens, Item, ItemNaoEncontradoError
+from .api import app
 
-__all__ = ["CadastroItens", "Item", "ItemNaoEncontradoError", "main"]
+__all__ = ["CadastroItens", "Item", "ItemNaoEncontradoError", "app", "main"]
 
 
 def main() -> None:
