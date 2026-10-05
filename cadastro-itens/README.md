@@ -15,7 +15,7 @@ Engenharia de Testes Unitários, Cobertura de Código e Governança de IA
 - tests\test_api.py
 - tests\test_domain.py
 
-# Texto utilizado para criar os tests via Github Copilot(AI):
+# Prompt utilizado para criar os tests via Github Copilot(AI):
 - Agora lendo o AGENTS.MD, faça testes unitário com Pytest estruturados no Padrão Arrange, Act, Assert. Aplique particionamento de equivalência EP e Analise de vfalor limite (BVA). Testes de Error Guessing para cenários de entradas inválidas ou inesperadas. Utilize @pytest.mark.parametrize e marcações @pytest.mark.unit, além de utilizar os markers do pyproject.toml quando necessário. Suíte com quantidade considerável de cenários/asserções de teste em torno de 15 a 20 testes e Medição com **pytest-cov** (`--cov-branch`) atingindo **100% de cobertura de código e ramificações** nas regras de negócio.
 
 # Execução dos comandos
